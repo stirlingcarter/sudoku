@@ -17,7 +17,7 @@ open System.Collections
 
 
 //ask for user input
-=======
+
 (*    Global Variabls   *)  
 let boxSize = 3
 let boardSize = 9
