@@ -35,9 +35,9 @@ let sr = new StreamReader(testFile)
 //we will want to edit this in the future, hence mutable
 let mutable puzzle = []
 //read in from stream
-for i in 1 .. 9 do
+for i in 1 .. boardSize do
     let mutable row = []
-    for n in 1 .. 9 do
+    for n in 1 .. boardSize do
         row <- (sr.ReadLine()) :: row
     puzzle <- row :: puzzle
     ()
