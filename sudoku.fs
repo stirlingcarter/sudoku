@@ -23,8 +23,5 @@ for i in 1 .. 9 do
     ()
 
 
-
-for r in puzzle do
-    for y in r do
-    Console.Write(y)
+puzzle <- puzzle |> List.map List.rev
 
