@@ -33,29 +33,19 @@ let testFile = Console.ReadLine()
 let sr = new StreamReader(testFile)
 
 //we will want to edit this in the future, hence mutable
-let mutable puzzle = []
+let mutable board = []
 //read in from stream
 for i in 1 .. boardSize do
     let mutable row = []
     for n in 1 .. boardSize do
         row <- (sr.ReadLine()) :: row
-    puzzle <- row :: puzzle
+    board <- row :: board
     ()
 
 
-puzzle <- puzzle |> List.map List.rev
+board <- board |> List.map List.rev
 
-let board = array2D [| 
-  [|0; 4; 3; 0; 8; 0; 2; 5; 0|];
-  [|6; 0; 0; 0; 0; 0; 0; 0; 0|];
-  [|0; 0; 0; 0; 0; 1; 0; 9; 4|];
-  [|9; 0; 0; 0; 0; 4; 0; 7; 0|];
-  [|0; 0; 0; 6; 0; 8; 0; 0; 0|];
-  [|0; 1; 0; 2; 0; 0; 0; 0; 3|];
-  [|8; 2; 0; 5; 0; 0; 0; 0; 0|];
-  [|0; 0; 0; 0; 0; 0; 0; 0; 5|];
-  [|0; 3; 4; 0; 9; 0; 7; 1; 0|]
-  |]
+
 
 (*    Get Available Options at a Square   *)
 let canPlace (r: int) (c: int) (board: int[,]) =
