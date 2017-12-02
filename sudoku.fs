@@ -1,6 +1,6 @@
 (*
 Names: Hunter Manhart & Stirling Carter
-Emails: Hunter.M.Manhart@vanderbilt.edu 
+Emails: Hunter.M.Manhart@vanderbilt.edu & Stirling.H.Carter@vanderbilt.edu
 VUnetIDs: manharhm & cartersh1
 Class: Programming Languages
 Date: 12/1/2017
