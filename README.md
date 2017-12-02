@@ -13,3 +13,9 @@ brew install mono
 fsharpc sudoku.fs
 
 mono sudoku.exe
+
+
+### Windows instructions, using VSCode:
+
+###### See the fsharp [website](http://fsharp.org/use/windows/)
+
