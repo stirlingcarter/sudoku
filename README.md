@@ -10,6 +10,6 @@ brew install mono
 
 ##### then compile as follows:
 
-mcs sudoku.fs
+fsharpc sudoku.fs
 
 mono sudoku.exe
