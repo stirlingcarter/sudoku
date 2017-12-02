@@ -33,17 +33,18 @@ let testFile = Console.ReadLine()
 let sr = new StreamReader(testFile)
 
 //we will want to edit this in the future, hence mutable
-let mutable board = []
+let mutable puzzle = []
 //read in from stream
 for i in 1 .. boardSize do
     let mutable row = []
     for n in 1 .. boardSize do
         row <- (sr.ReadLine()) :: row
-    board <- row :: board
+    puzzle <- row :: puzzle
     ()
 
 
-board <- board |> List.map List.rev
+puzzle <- puzzle |> List.map List.rev
+
 
 
 
