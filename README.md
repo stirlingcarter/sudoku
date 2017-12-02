@@ -2,16 +2,13 @@
 
 ## A sudoku solver written in F#
 
-### OSX instructions, using VSCode: 
+### OSX instructions:
 
 ##### install [mono](http://www.mono-project.com):
 
 brew install mono
 
-##### add mono to path: 
+then compile as follows:
 
-export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin/
-
-##### Open visual studio, press cmd+p, and type:
-
-'ext install Ionide-fsharp'. 
+mcs sudoku.fs
+mono sudoku.exe
