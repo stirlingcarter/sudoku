@@ -10,47 +10,37 @@ Honor Statement: We have neither given nor received unauthorized aid on this ass
 
 module sudoku
 
-//We need to specify environment for Console, Stream
+// We need to specify environment for Console, Stream
 open System
 open System.IO
 open System.Collections
 
-
-//ask for user input
 
 (*    Global Variabls   *)  
 let boxSize = 3
 let boardSize = 9
 
 
-
+// Ask for file
 Console.Write("Enter the name of your file: ")
 
-//Receive user input
+// Receive user input
 let testFile = Console.ReadLine()
 
-//create a stream to read an input file
+// Create a stream to read an input file
 let sr = new StreamReader(testFile)
 
-<<<<<<< HEAD
-//we will want to edit this in the future, hence mutable
-let mutable puzzle = []
-//read in from stream
-=======
+// Parse each line into number array via sequence
+let readLines = seq {
+    while not sr.EndOfStream do
+        // Trim, split by spaces, convert to int, and yield int array
+        yield (((sr.ReadLine()).Trim()).Split(' ') 
+            |> Array.map (fun str -> str |> int) )
+}
 
-//  Read in from stream
->>>>>>> git crap
-for i in 1 .. boardSize do
-    let mutable row = []
-    for n in 1 .. boardSize do
-        row <- (sr.ReadLine()) :: row
-    puzzle <- row :: puzzle
-    ()
-
-
-puzzle <- puzzle |> List.map List.rev
-
-
+// Actually get nested array from sequence
+let numbers = Seq.toArray readLines
+let board = array2D numbers
 
 
 (*    Get Available Options at a Square   *)
